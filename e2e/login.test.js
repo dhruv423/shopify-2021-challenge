@@ -29,7 +29,7 @@ describe("login", () => {
     let response;
     beforeAll(async () => {
       const body = {
-        email: "test@tm.com",
+        email: process.env.TEST_EMAIL,
         password: "testpassword",
       };
       response = await needle("post", `localhost:${PORT}/user/login`, body, {
