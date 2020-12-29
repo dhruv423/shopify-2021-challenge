@@ -36,7 +36,6 @@ router.post("/register", async (req, res) => {
 // Must use the JWT token for image endpoints
 // Upon error returns error
 router.post("/login", async (req, res) => {
-  console.log(req.user);
 
   // Login a registered user
   try {
@@ -52,7 +51,7 @@ router.post("/login", async (req, res) => {
       return res.status(401).send({ error: "Invalid Password" });
     }
     const token = await user.generateAuthToken();
-    return res.send({ user, token });
+    return res.send({ token });
   } catch (error) {
     res.status(500).send(error);
   }

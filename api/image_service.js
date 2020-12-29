@@ -27,7 +27,7 @@ router.post("/upload", imageUpload.array("images"), async (req, res) => {
 
     for (const file of req.files) {
       const path = file.path;
-      const newFileName = path.replace(/\s/g, ""); // Remove all whitespaces since find in MongoDB doesn't like spaces
+      const newFileName = path.replace(/\s/g, ""); // Remove all whitespaces since search in MongoDB doesn't like spaces
       const oldImage = await Image.findOne({ name: newFileName }); // Check if image exists
       if (oldImage) {
         response.errors.push(`${newFileName} already exists`); // Add it to error response
