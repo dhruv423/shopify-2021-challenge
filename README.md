@@ -49,7 +49,7 @@ Image Model is defined as follows:
 ```
 name: String // Name of the image
 date: Date // Date when the image was uploaded
-user: ObjectId of associated User
+user: ObjectId // User _id
 link: String // Link to the image on Cloudinary storage
 public: Boolean // Public or Private, default to Private
 
