@@ -78,7 +78,6 @@ To run end to end tests, make sure you provide a test account information that y
 ## Future Improvements
 
 - Adding more features outlined in the [project description](https://docs.google.com/document/d/1ZKRywXQLZWOqVOHC4JkF3LqdpO3Llpfk_CkZPR8bjak/edit)
-
 - Add scripts to take care of adding and deleting resources from the database
 
 ## Resources
