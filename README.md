@@ -72,7 +72,7 @@ Error Response ![Error Response](readme_images/Error-Response.png)
 ## Testing
 To run end to end tests, make sure you provide a test account information that you have made in the `.env` file. To run the tests, use the following `npm test`. If you want to run the tests again make sure to clear the database on new users and new images, except test user.
 
-Test Results ![Test Results](readme_images/Testing-Result.png)
+![Test Results](readme_images/Testing-Result.png)
 
 
 ## Future Improvements
