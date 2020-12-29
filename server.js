@@ -1,10 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const users = require("./api/user_service");
-const images = require("./api/image_service");
-require("dotenv").config({ path: ".env" }); // allows use of .env file
-const cloudinary = require("cloudinary").v2; // image repository
+const users = require("./routes/user_route");
+const images = require("./routes/image_route");
+require("dotenv").config({ path: ".env" }); 
+const cloudinary = require("cloudinary").v2; 
 
 const app = express();
 

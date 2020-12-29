@@ -21,6 +21,8 @@ MONGODB_URI=mongodb+srv://user:password@cluster0.cpaq5.mongodb.net/<data>?retryW
 JWT_KEY=SOME_RANDOM_STRING_CAN_BE_ANYTHING
 CLOUDINARY_API_KEY=XXXXXXXXX
 CLOUDINARY_API_SECRET=XXXXXXXXXXXXXXX
+TEST_EMAIL=XXXXX
+TEST_PASSWORD=XXXXX
 ```
 - The keys can be obtained from the respective sites once you have an account
 - Once you have that set up, you can run `npm start`
@@ -67,10 +69,17 @@ Success Response ![Success Response](readme_images/Success-Response.png)
 
 Error Response ![Error Response](readme_images/Error-Response.png)
 
+## Testing
+To run end to end tests, make sure you provide a test account information that you have made in the `.env` file. To run the tests, use the following `npm test`. If you want to run the tests again make sure to clear the database on new users and new images, except test user.
+
+Test Results ![Test Results](readme_images/Testing-Result.png)
+
+
 ## Future Improvements
 
 - Adding more features outlined in the [project description](https://docs.google.com/document/d/1ZKRywXQLZWOqVOHC4JkF3LqdpO3Llpfk_CkZPR8bjak/edit)
 
+- Add scripts to take care of adding and deleting resources from the database
 
 ## Resources
 - [Node.js Cloudinary](https://cloudinary.com/documentation/node_integration)
