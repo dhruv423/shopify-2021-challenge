@@ -32,7 +32,6 @@ TEST_PASSWORD=XXXXX
 
 
 ## Features
-- Image storage for users
 - Users can upload one or multiple images at once
 - Secure storage with the use of JWT token to access image uploads
 
