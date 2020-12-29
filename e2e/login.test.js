@@ -2,6 +2,8 @@ const { beforeAll, expect } = require("@jest/globals");
 const needle = require("needle");
 require("dotenv").config();
 
+const PORT = process.env.PORT || 3000;
+
 describe("login", () => {
   describe("successful login", () => {
     let response;
@@ -11,7 +13,7 @@ describe("login", () => {
         email: process.env.TEST_EMAIL,
         password: process.env.TEST_PASSWORD,
       };
-      response = await needle("post", "localhost:3000/user/login", body, {
+      response = await needle("post", `localhost:${PORT}/user/login`, body, {
         json: true,
       });
     });
@@ -30,7 +32,7 @@ describe("login", () => {
         email: "test@tm.com",
         password: "testpassword",
       };
-      response = await needle("post", "localhost:3000/user/login", body, {
+      response = await needle("post", `localhost:${PORT}/user/login`, body, {
         json: true,
       });
     });

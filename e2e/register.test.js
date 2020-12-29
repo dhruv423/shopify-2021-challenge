@@ -4,6 +4,8 @@ require("dotenv").config();
 
 const UserRoute = require("../routes/user_route");
 
+const PORT = process.env.PORT || 3000;
+
 describe("register", () => {
   describe("successful register", () => {
     let response;
@@ -14,7 +16,7 @@ describe("register", () => {
         password: "testpassword",
         confirmPassword: "testpassword",
       };
-      response = await needle("post", "localhost:3000/user/register", body, {
+      response = await needle("post", `localhost:${PORT}/user/register`, body, {
         json: true,
       });
     });
@@ -35,7 +37,7 @@ describe("register", () => {
         password: "testpassword",
         confirmPassword: "testpass",
       };
-      response = await needle("post", "localhost:3000/user/register", body, {
+      response = await needle("post", `localhost:${PORT}/user/register`, body, {
         json: true,
       });
     });

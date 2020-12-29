@@ -3,6 +3,8 @@ const needle = require("needle");
 const path = require("path");
 require("dotenv").config();
 
+const PORT = process.env.PORT || 3000;
+
 describe("upload", () => {
   describe("successful login and upload", () => {
     let loginResponse;
@@ -12,9 +14,14 @@ describe("upload", () => {
         email: process.env.TEST_EMAIL,
         password: process.env.TEST_PASSWORD,
       };
-      loginResponse = await needle("post", "localhost:3000/user/login", body, {
-        json: true,
-      });
+      loginResponse = await needle(
+        "post",
+        `localhost:${PORT}/user/login`,
+        body,
+        {
+          json: true,
+        }
+      );
       const data = {
         images: {
           file:
@@ -27,7 +34,7 @@ describe("upload", () => {
 
       uploadResponse = await needle(
         "post",
-        "localhost:3000/image/upload",
+        `localhost:${PORT}/image/upload`,
         data,
         { multipart: true }
       );
@@ -48,9 +55,14 @@ describe("upload", () => {
         email: process.env.TEST_EMAIL,
         password: process.env.TEST_PASSWORD,
       };
-      loginResponse = await needle("post", "localhost:3000/user/login", body, {
-        json: true,
-      });
+      loginResponse = await needle(
+        "post",
+        `localhost:${PORT}/user/login`,
+        body,
+        {
+          json: true,
+        }
+      );
 
       const data = {
         images: {
@@ -64,7 +76,7 @@ describe("upload", () => {
 
       uploadResponse = await needle(
         "post",
-        "localhost:3000/image/upload",
+        `localhost:${PORT}/image/upload`,
         data,
         { multipart: true }
       );
