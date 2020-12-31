@@ -19,6 +19,7 @@ To run this app, follow these steps:
 PORT=3000
 MONGODB_URI=mongodb+srv://user:password@cluster0.cpaq5.mongodb.net/<data>?retryWrites=true&w=majority
 JWT_KEY=SOME_RANDOM_STRING_CAN_BE_ANYTHING
+CLOUDINARY_CLOUD_NAME=XXXXXX
 CLOUDINARY_API_KEY=XXXXXXXXX
 CLOUDINARY_API_SECRET=XXXXXXXXXXXXXXX
 TEST_EMAIL=XXXXX

@@ -35,7 +35,7 @@ app.use("/image", images);
 
 // Connect to Cloudinary repository
 cloudinary.config({
-  cloud_name: "dwddpd7jx",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
